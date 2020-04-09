@@ -16,6 +16,10 @@ namespace Infrastructure.Data
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductBrand> ProductBrands { get; set; }
     public DbSet<ProductType> ProductTypes { get; set; }
+    public DbSet<Franchise> Franchises { get; set; }
+    public DbSet<Country> Countries { get; set; }
+    public DbSet<State> States { get; set; }
+    public DbSet<PricingModel> PricingModels { get; set; }
 
      protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -20,7 +20,7 @@ namespace API
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+                var loggerFactory = services.GetRequiredService<ILoggerFactory>(); 
                 try 
                 {
                     var context = services.GetRequiredService<eAppContext>();

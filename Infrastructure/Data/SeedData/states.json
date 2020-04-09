@@ -1,0 +1,26 @@
+[
+    {
+      "Id": 1,
+      "Name": "Andhra Pradesh"
+    },
+    {
+      "Id": 2,
+      "Name": "Karnataka"
+    },
+    {
+      "Id": 3,
+      "Name": "Bihar"
+    },
+    {
+      "Id": 4,
+      "Name": "Delhi"
+    },
+    {
+      "Id": 5,
+      "Name": "UP"
+    },
+    {
+      "Id": 6,
+      "Name": "Punjab"
+    }
+  ]

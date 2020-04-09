@@ -67,6 +67,71 @@ namespace Infrastructure.Data
 
                     await context.SaveChangesAsync();
                 }
+                 if (!context.Countries.Any())
+                {
+                    var countriesData =
+
+                       // File.ReadAllText(path + @"/Data/SeedData/brands.json");
+                        File.ReadAllText("C:/Users/sanje/Desktop/Desktop/Projects/eApp/Infrastructure/Data/SeedData/countries.json");
+
+                    var countries = JsonSerializer.Deserialize<List<Country>>(countriesData);
+
+                    foreach (var item in countries)
+                    {
+                        context.Countries.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
+
+                if (!context.States.Any())
+                {
+                    var statesData =
+                        //File.ReadAllText(path + @"/Data/SeedData/types.json");
+                        File.ReadAllText("C:/Users/sanje/Desktop/Desktop/Projects/eApp/Infrastructure/Data/SeedData/states.json");
+                        
+
+                    var states = JsonSerializer.Deserialize<List<State>>(statesData);
+
+                    foreach (var item in states)
+                    {
+                        context.States.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
+                 if (!context.PricingModels.Any())
+                {
+                    var priningmodelsData =
+                        //File.ReadAllText(path + @"/Data/SeedData/types.json");
+                        File.ReadAllText("C:/Users/sanje/Desktop/Desktop/Projects/eApp/Infrastructure/Data/SeedData/pricingmodels.json");
+                        
+
+                    var pricingmodels = JsonSerializer.Deserialize<List<PricingModel>>(priningmodelsData);
+
+                    foreach (var item in pricingmodels)
+                    {
+                        context.PricingModels.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
+
+                if (!context.Franchises.Any())
+                {
+                    var franchisesData =
+                       // File.ReadAllText(path + @"/Data/SeedData/products.json");
+                       File.ReadAllText("C:/Users/sanje/Desktop/Desktop/Projects/eApp/Infrastructure/Data/SeedData/franchises.json");
+
+                    var franchises = JsonSerializer.Deserialize<List<Franchise>>(franchisesData);
+
+                    foreach (var item in franchises)
+                    {
+                        context.Franchises.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
             }
             catch (Exception ex)
             {

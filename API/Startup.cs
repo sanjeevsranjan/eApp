@@ -25,6 +25,7 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IProductRepository,ProductRepository>();
+            services.AddScoped<IFranchiseRepository,FranchiseRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddControllers();
              services.AddSingleton<IConnectionMultiplexer>(c => {

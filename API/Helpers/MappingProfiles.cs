@@ -18,6 +18,8 @@ namespace API.Helpers
                 .ForMember(d => d.State, o => o.MapFrom(s => s.State.Name))
                 .ForMember(d => d.PricingModel, o => o.MapFrom(s => s.PricingModel.Name))
                 .ForMember(d => d.LogoUrl, o => o.MapFrom<FranchiseUrlResolver>());
+
+                CreateMap<Core.Entities.Identity.Address, AddressDto>().ReverseMap();
                 
         }
     }

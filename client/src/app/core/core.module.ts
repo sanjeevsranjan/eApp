@@ -8,6 +8,7 @@ import { ServerErrorComponent } from './server-error/server-error.component';
 import {ToastrModule} from 'ngx-toastr';
 import { SectionHeaderComponent } from './section-header/section-header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     CommonModule,
     RouterModule,
+    SharedModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
       preventDuplicates: true

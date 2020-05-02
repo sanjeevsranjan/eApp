@@ -20,7 +20,9 @@ namespace API.Helpers
                 .ForMember(d => d.LogoUrl, o => o.MapFrom<FranchiseUrlResolver>());
 
                 CreateMap<Core.Entities.Identity.Address, AddressDto>().ReverseMap();
-                
+                CreateMap<CustomerBasketDto, CustomerBasket>();
+                CreateMap<BasketItemDto, BasketItem>();
+
         }
     }
 }

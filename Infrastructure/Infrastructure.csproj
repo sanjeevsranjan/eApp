@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0"/>
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.5.0"/>
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0"/>
+    <PackageReference Include="Stripe.net" Version="37.4.0"/>
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
